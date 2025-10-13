@@ -1,0 +1,24 @@
+/* This would add a border around the cells */
+table {
+	border: 2px solid black;
+}
+
+
+/* This adds a hover effect changes color to yellow and font black*/
+td:hover {
+	background-color: yellow;
+	color: black;
+}
+
+/* This will change the background color of the cells when you mouse over them. */
+tr, th {
+	background-color: crimson;
+	color: black;
+}
+
+/* This will make remaining rows have a darnk green background and white front */
+tr, td {
+	background-color: deepskyblue;
+	color: white;
+}
+

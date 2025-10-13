@@ -1,0 +1,9 @@
+/* changing an ordered list from 1. 2. 3. to roman numerals */
+ol {
+	list-style-type: upper-roman;
+}
+
+/* to change the circular bullet points to  square*/
+ul {
+	list-style-type: square;
+}
