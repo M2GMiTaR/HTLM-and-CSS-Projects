@@ -1,0 +1,30 @@
+/* The navigation bar */
+.navbar {
+    overflow: hidden;
+    background-color: #8FBC8F;
+    position: fixed; /* Set the navbar to the fixed position */
+    top: 0; /* POsition the navbar at the top of the page */
+    width: 100%; /* Full width */
+    display: flex; /* enables flexbox */
+    justify-content: center; /* makes it center the items horizontally */
+}
+
+/* Links inside the navbar */
+.navbar a {
+    display: block;
+    color: black;
+    text-align:  center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change background on mouse-over */
+.navbar a:hover {
+    background: #556B2F;
+    color: black;
+}
+
+/* Main contect */
+.main {
+    margin-top: 30px; /* adds a top margin to avoid content overlay */
+}

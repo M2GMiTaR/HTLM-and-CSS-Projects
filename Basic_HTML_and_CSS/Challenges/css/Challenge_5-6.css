@@ -1,0 +1,13 @@
+.row {
+    display: flex;
+}
+
+.column {
+    padding: 10px;
+    height: 300px;
+    width: 200px;
+    background-color: aquamarine;
+    color: darkblue;
+    border: 2px solid black;
+    border-radius: 5px;
+}

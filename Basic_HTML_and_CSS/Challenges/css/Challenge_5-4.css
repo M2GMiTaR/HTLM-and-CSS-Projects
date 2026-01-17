@@ -1,0 +1,51 @@
+/* Container holding the image*/
+.container {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    color: black;
+    width: 30%; /* Having this width in the .container it makes everything inside it
+                scale correctly - including the image*/
+}
+
+.container img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/*Bottom left text */
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+}
+
+/* Top left corner */
+.top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+
+/* Top right corner */
+.top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
+
+/* Bottom right */
+.bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+}
+
+/* Centered text */
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

@@ -1,0 +1,17 @@
+p {
+    font-size: 18px;
+    color:blue;
+    background-color: lightyellow;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    transition: all 0.3s ease; /* smooth transition for hover */
+    width: fit-content; /* shrink to text size */
+}
+
+p:hover {
+    color: white;
+    background-color: darkblue;
+    border-color: black;
+    transform: scale(1.05); /* slightly enlarge on hover */
+}

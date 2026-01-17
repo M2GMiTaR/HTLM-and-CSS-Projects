@@ -1,0 +1,12 @@
+/* Default paragraph style */
+p {
+    color: black;
+    font-size: 18px;
+}
+
+/* Media query for small screens */
+@media screen and (max-width: 600px) {
+    p {
+        color: blue;
+    }
+}
