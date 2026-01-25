@@ -71,10 +71,3 @@ Open `index.html` from the folder in your browser.
 - Bootstrap 4  
 
 ---
-
-## 🚀 How to Get Started
-
-Clone this repository:
-
-```bash
-git clone https://github.com/M2GMiTaR/HTLM-and-CSS-Projects.git
