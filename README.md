@@ -64,7 +64,7 @@ Open `index.html` from the folder in your browser.
 
 ---
 
-## 🛠 Technologies Used
+## Technologies Used
 
 - HTML5  
 - CSS3  
