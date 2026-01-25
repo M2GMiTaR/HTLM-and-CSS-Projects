@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <!--HEAD-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" /> <!--Set the page’s width to match the device’s screen width-->
+        <title>Grega Mirtic</title>
+        <link rel="stylesheet" type="text/css" href="stylesheet/GM_portofolio.css"> <!--links to the CSS portfolio file-->
+    </head>
+
+    <!--BODY-->
+    <body class="Background"> <!--Background container-->
+
+        <!--NAVBAR-->
+        <div class="Navbar">
+            <a class="active" href="#Home">Home</a>
+            <a href="#About">About</a>
+            <a href="#GitHub">GitHub</a>
+            <a href="#Contact">Contact</a>
+        </div>
+
+        <!-- Breaks inserted to add space between navbar and the first heading-->
+        <br>
+        <br>
+
+        <!--BACKGROUND VIDEO-->
+        <div id="Home">
+            <video autoplay muted loop id="Typing_Code">
+                <source src="images/video/Typing_Code.mp4" type="video/mp4">
+                <!-- This displays message if video does not play-->
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+
+        <!--VIDEO TEXT-->
+        <div class="Video_Text">
+            <h1 class="white-text">Grega Mirtic Portfolio</h1>
+            <strong>
+                <p class="center">
+                    <q>I NEED TO COME UP WITH SOME KIND OF TEXT TO WRITE Here
+                        <br>AND I CAN USE BR TO BREAK THE LINES 
+                    </q>
+                    <br> -Joseph Weizenbaum
+                    <br>
+                    <br> My name is ____. Welcome to my portfolio website. On it, I will tell you about my background and experience.
+                    <br>
+                    <br> Thank you for stopping by and enjoy! 
+                </p>    
+            </strong>
+        </div>
+
+        <!--ABOUT SECTION-->
+        <div class="Row" id="About">
+            <!--LEFT COLUMN-->
+            <div class="Right_Column">
+                <img src="images/My_Cats.jpeg" alt="My_Cats">
+            </div>
+            <!--RIGHT COLUMN-->
+            <div class="Left_Column">
+                <h1>About</h1>
+                <p>
+                    I am something something something
+                       <br>
+                    <br>I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s Software Developer Boot Camp, and trained and experienced in the following web and programming languages: HTML, CSS, JavaScript, SQL, C# and more. 
+                    <br>
+                    <br>I am a full-stack developer and would love to work with you on your project. <a href="#Contact">Contact</a> me below!
+                </p>
+            </div>
+        </div>
+
+        <!--GITHUB SRCTION-->
+        <div class="Row" id="GitHub">
+            <!--LEFT COLUMN-->
+            <div class="Left_Column">
+                <h1>GitHub</h1>
+                <p>
+                   You can view my coding projects on my GitHub profile here:
+                    <br>
+                    <p class="center"><a href="https://github.com/M2GMiTaR" target="_blank">M2GMiTaR</a></p>
+                </p> 
+            </div>
+            <!--RIGHT COLUMN-->
+            <div class="Right_Column">
+                <a href="https://github.com/M2GMiTaR" target="_blank"><img src="images/GitHub.png" alt="GitHub Logo"></a>
+            </div>
+        </div>
+
+        <!--CONTACT SECTION-->    
+        <div class="Row" id="Contact">
+            <!--CONTACT IMAGE, LEFT COLUMN-->
+            <div class="Right_Column Column_tall">
+                <img src="images/Inti_Typing.png" alt="Contact_Image"> <!--ADD CONTACT IMAGE-->
+            </div>
+            <!--CONTACT FORM, RIGHT COLUMN-->
+            <div class="Left_Column Column_tall">
+                <h1>Contact</h1>
+                <!-- This specifies where and how to send the form date; We are leaving it black-->
+                 <form action="" method="POST"> <!-- Here we are utilizing a 3rd party service to submit the contact form data,
+                    insert your formspree endpoint in the action attribute-->
+                    <label>Name:</label> 
+                        <input type="text" placeholder="Please enter your name here">
+                    <label>Email:</label>
+                        <input type="text" placeholder="Please enter your email here">
+                    <label>Message:</label>
+                        <input type="text" id="Message" name="Message" placeholder="Please write your message here">
+                        <input type="submit" value="SUBMIT">
+                 </form>
+            </div>
+        </div>
+
+        <!--FOOTER SECTION-->
+         <footer>
+            <p>
+                <p class="center">&copy M2GMiTaR, <a href="https://github.com/M2GMiTaR" target="_blank">M2GMiTaR</a></p>
+                <br>
+            </p>
+        </footer>
+
+    </body>
+</html>
