@@ -5,9 +5,9 @@ Each project focuses on real examples like image effects, responsive layouts, an
 
 ---
 
-## 📂 Projects Included
+##  Projects Included
 
-### 🎨 Effecting Images with CSS
+###  Effecting Images with CSS
 📁 Folder:  
 https://github.com/M2GMiTaR/HTLM-and-CSS-Projects/tree/main/Effecting-images-with-CSS
 
@@ -26,7 +26,7 @@ Open `index.html` from the folder in your browser.
 
 ---
 
-### 🧩 Bootstrap 4 Project
+### Bootstrap 4 Project
 📁 Folder:  
 https://github.com/M2GMiTaR/HTLM-and-CSS-Projects/tree/main/bootstrap4_project
 
@@ -45,7 +45,7 @@ Open `index.html` from the folder in your browser.
 
 ---
 
-### 💼 Grega_Mirtic_Portofolio
+### Grega_Mirtic_Portofolio
 📁 Folder:  
 https://github.com/M2GMiTaR/HTLM-and-CSS-Projects/tree/main/Grega_Mirtic_Portofolio
 
