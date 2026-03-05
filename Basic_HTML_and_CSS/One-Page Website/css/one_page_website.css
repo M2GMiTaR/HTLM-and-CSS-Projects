@@ -1,13 +1,313 @@
+/* GENERAL BODY STYLING */
 body {
-    background-color: rgb(92, 214, 252);
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 1.5em;
-    color: darkslategray;
+    background-color: rgb(92, 214, 252); /* Light blue background */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* Fallback fonts included */
+    font-size: 1.5em; /* Larger base font size */
+    color: darkslategray; /* Default text color */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
 }
 
+/* HEADING STYLE */
 h1 {
-    color: rgb(61, 155, 199);
-    font-family:'Courier New', Courier, monospace;
+    color: rgb(61, 155, 199); /* Slightly darker blue for headings */
+    font-family: 'Courier New', Courier, monospace; /* Monospace font for heading */
+    text-align: center; /* Centered heading */
+    margin-top: 0.5em; /* Small top margin */
+}
+
+/* NAVIGATION MENU */
+ul {
+    list-style-type: none; /* Remove bullets */
+    margin: 0;
+    padding: 1.5em; /* Padding around nav */
+    background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent background */
+    display: flex; /* Flex layout for horizontal menu */
+    justify-content: center; /* Center items */
+    gap: 2.5em; /* Space between menu items */
+    flex-wrap: wrap; /* Wrap on smaller screens */
+}
+
+a {
+    text-decoration: none; /* Remove underline */
+    color: darkslategray; /* Menu text color */
+    font-weight: bold;
+}
+
+li {
+    display: inline; /* Make list items inline */
+    font-size: 1.2rem;
+    border-bottom: 2px solid transparent; /* Underline effect on hover */
+    transition: 0.2s; /* Smooth hover transition */
+}
+
+a:hover li {
+    border-bottom-color: rgb(248, 72, 9); /* Orange underline on hover */
+}
+
+/* HOME SECTION  */
+#home {
+    text-align: center;
+    padding: 2em 1em;
+    background: rgba(255, 255, 255, 0.2); /* Transparent overlay */
+}
+
+#home span {
+    font-size: 2.5rem; /* Big heading text */
+    background: rgba(255, 255, 255, 0.6); /* White overlay */
+    padding: 0.3em 1em; /* Space around text */
+    border-radius: 40px; /* Rounded pill shape */
+    display: inline-block; /* Keep width of text only */
+}
+
+/* SLIDESHOW CONTAINER */
+.slideshow-container {
+    max-width: 1000px; /* Limit maximum width */
+    margin: 2rem auto; /* Center container */
+    padding: 0 20px;
+}
+
+/* MAIN SLIDES AREA */
+.main-display {
+    position: relative; /* Needed for absolute positioning of slides and arrows */
+    width: 100%;
+    height: 500px; /* Fixed height for uniformity */
+    background: #333; /* Dark background for contrast */
+    border-radius: 15px; /* Rounded corners */
+    overflow: hidden; /* Hide overflowing slides */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Soft shadow */
+    margin-bottom: 20px;
+}
+
+.main-slide {
+    position: absolute; /* Stack all slides on top of each other */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.5s ease-in-out; /* Fade effect */
+    pointer-events: none; /* Prevent clicking hidden slides */
+}
+
+.main-slide.active {
+    opacity: 1; /* Show active slide */
+    pointer-events: auto; /* Make active slide clickable */
+}
+
+/* Image and video fill slide container */
+.main-slide img,
+.main-slide iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio, fill container */
+}
+
+/* NAVIGATION ARROWS  */
+.slide-prev, .slide-next {
+    position: absolute;
+    top: 50%; /* Vertically center */
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent circle */
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    display: flex; /* Center icon inside */
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10; /* Stay on top of slides */
+    transition: background-color 0.3s; /* Smooth hover */
+}
+
+.slide-prev { left: 20px; }
+.slide-next { right: 20px; }
+
+.slide-prev:hover,
+.slide-next:hover {
+    background-color: rgb(248, 72, 9); /* Orange hover */
+}
+
+/* SLIDE COUNTER  */
+.slide-counter {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 1rem;
+    z-index: 10;
+}
+
+/* THUMBNAIL STRIP */
+.thumbnail-strip {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto; /* Scroll if overflow */
+    padding: 15px 5px;
+    scrollbar-width: thin; /* Firefox scrollbar */
+    scrollbar-color: rgb(248, 72, 9) rgba(255, 255, 255, 0.3);
+}
+
+.thumbnail-strip::-webkit-scrollbar {
+    height: 8px; /* Chrome scrollbar */
+}
+.thumbnail-strip::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+.thumbnail-strip::-webkit-scrollbar-thumb {
+    background: rgb(248, 72, 9);
+    border-radius: 10px;
+}
+
+/* Individual thumbnail */
+.thumbnail {
+    position: relative;
+    flex: 0 0 120px; /* Fixed width */
+    height: 80px; /* Fixed height */
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 3px solid transparent;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.thumbnail:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.thumbnail.active {
+    border-color: rgb(248, 72, 9); /* Highlight active thumbnail */
+    box-shadow: 0 0 15px rgba(248, 72, 9, 0.5);
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Fill thumbnail container */
+}
+
+/* VIDEO PLAY ICON             */
+.play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center inside thumbnail */
+    color: white;
+    font-size: 24px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent circle */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none; /* Icon not clickable separately */
+}
+
+/* LIGHTBOX MODAL             */
+.lightbox-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay on top */
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Dark overlay */
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.lightbox-modal.active { display: flex; } /* Show when active */
+
+/* Lightbox content */
+.lightbox-content {
+    max-width: 90vw;
+    max-height: 85vh;
+    text-align: center;
+    position: relative;
+    background: #111;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0 0 30px black;
+}
+
+/* Image in lightbox */
+.lightbox-image {
+    max-width: 100%;
+    max-height: 75vh;
+    border-radius: 15px;
+    border: 3px solid white;
+}
+
+/* Video in lightbox */
+.lightbox-video-container { max-width: 100%; }
+.lightbox-video {
+    width: 90vw;
+    max-width: 960px;
+    height: calc(90vw * 9 / 16); /* Maintain 16:9 aspect ratio */
+    max-height: 75vh;
+    border-radius: 15px;
+    border: 3px solid white;
+}
+
+/* Close button */
+.lightbox-close {
+    position: absolute;
+    top: 25px;
+    right: 40px;
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10000;
+    transition: 0.3s;
+}
+
+.lightbox-close:hover { color: rgb(248, 72, 9); }
+
+/* Lightbox arrows */
+.lightbox-prev, .lightbox-next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.3s;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    user-select: none;
+    z-index: 10000;
+}
+
+.lightbox-prev { left: 20px; }
+.lightbox-next { right: 20px; }
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    background-color: rgb(248, 72, 9);
+    color: white;
+}
+
+/* CONTACT FORM  */
+#contact {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 2em 1em;
+    margin: 2em 0;
+    text-align: center;
 }
 
 form input[type="text"] {
@@ -15,4 +315,47 @@ form input[type="text"] {
     margin: 5px;
     border: 2px solid rgb(248, 72, 9);
     border-radius: 7px;
+    padding: 8px 12px;
+}
+
+.form-spacer { margin: 15px 0 5px; }
+.terms { font-size: 0.9rem; }
+
+input[type="submit"] {
+    background: rgb(248, 72, 9);
+    color: white;
+    border: none;
+    padding: 10px 35px;
+    border-radius: 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid transparent;
+    margin-top: 15px;
+}
+
+input[type="submit"]:hover {
+    background: white;
+    color: rgb(248, 72, 9);
+    border-color: rgb(248, 72, 9);
+}
+
+/* FOOTER   */
+.footer {
+    text-align: center;
+    padding: 1.5em;
+    background: rgba(0, 0, 0, 0.05);
+    font-size: 1rem;
+}
+
+/* RESPONSIVE DESIGN   */
+@media (max-width: 768px) {
+    .main-display { height: 350px; }
+    .thumbnail { flex: 0 0 100px; height: 70px; }
+    .slide-prev, .slide-next { width: 40px; height: 40px; font-size: 20px; }
+}
+
+@media (max-width: 480px) {
+    .main-display { height: 250px; }
+    .thumbnail { flex: 0 0 80px; height: 60px; }
 }
