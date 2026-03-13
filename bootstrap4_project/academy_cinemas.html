@@ -2,16 +2,21 @@
 <html lang="en">
   <head>
     <!-- Required meta tags -->
+    <!-- Defines character encoding so text renders correctly -->
     <meta charset="utf-8">
+
+    <!-- Makes the page responsive on mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap CSS framework -->
+    <!-- Provides pre-built styles and components like navbar, cards, alerts, etc. -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <title>Academy Cinemas!</title>
 
     <style>
         /* Makes all images in the showtime section the same size */
+        /* Prevents cards from becoming uneven due to image size differences */
         #showtime .card-img-top {
             height: 250px;
             width: 100%;
@@ -19,101 +24,160 @@
         }
 
         /* Makes all cards same height */
+        /* Ensures the card layout stays aligned across the row */
         #showtime .card {
             height: 100%;
         }
 
         /* Makes card body stretch uniformly */
-        
-
+        /* Allows the card text area to expand and keep consistent spacing */
         #showtime .card-text {
             flex-grow: 1;
         }
     </style>
 
-
   </head>
   <body>
+
+    <!-- Main Bootstrap container -->
+    <!-- Centers the page content and adds responsive spacing -->
     <div class="container">
 
+        <!-- Navigation bar at the top of the page -->
         <nav class="navbar navbar-expand-lg navbar-light bg-info">
 
+            <!-- Navbar content container -->
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+                <!-- Navigation links -->
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+                <!-- About section link -->
                 <li class="nav-item active">
                     <a class="nav-link text-light" href="#About">About </a>
                 </li>
+
+                <!-- Showtimes section link -->
                 <li class="nav-item active">
                     <a class="nav-link text-light" href="#showtime">Showtimes</a>
                 </li>
+
+                <!-- Deals section link -->
                 <li class="nav-item active">
                     <a class="nav-link text-light" href="#deals">Deals</a>
                 </li>
+
                 </ul>
+
+                <!-- Search form in the navbar -->
                 <form class="form-inline my-2 my-lg-0">
+
+                <!-- Search input -->
                 <input class="form-control mr-sm-2" type="search" placeholder="Search">
+
+                <!-- Search button -->
                 <button class="btn btn-primary my-2 my-sm-0 text-light" type="submit">Search</button>
+
                 </form>
             </div>
         </nav>
 
+        <!-- Main banner section using Bootstrap Jumbotron -->
+        <!-- Displays the cinema title and tagline -->
         <div class="jumbotron jumbotron-fluid bg-info text-center">
             <div class="container">
+
+                <!-- Main page heading -->
                 <h1 class="display-4 text-light">Academy Cinemas</h1>
+
+                <!-- Tagline text -->
                 <p class="lead text-light">Sit back, relax, and enjoy the show...</p>
+
             </div>
         </div>
 
+        <!-- /Deal Alert  -->
+        <!-- Bootstrap Alert component used to show a promotional offer -->
+        <div class="alert alert-success text-center" role="alert">
+        🎬 Special Offer! Buy one ticket and get one free every Tuesday!
+        </div>
+        <!-- /Deal Alert -->
+
+        <!-- Information section with 3 columns -->
         <div class="container">
+
+            <!-- Bootstrap grid row -->
             <div class="row align-items-start">
+
+                <!-- Column 1: Cinema location image -->
                 <div class="col-sm">
-                
                     <img class="img-fluid" src="./img/pdx.jpg" alt=""/>
-
-
                 </div>
 
+                <!-- Column 2: Cinema information -->
                 <div class="col-sm">
 
                     <h3 id="about">Accomodations:</h3>
+
+                    <!-- Description of theater features -->
                     <p>Located in beautiful Portalnd, Oregon's Pearl Disctrict, our reels have been spinning since 1959.</p>
                     <p>Showing our guests a great time is our passion and seeing their smiles is our pleasure!</p>
                     <p>All of our auditoriums are equipped with brand new christie 3D&reg; sound systems!</p>
                     <p>Relax in our, extra-wide, plush cushioning recliners. Our seating arragement is disability friendly &#9855;.</p>
 
-
                 </div>
 
+                <!-- Column 3: List of currently playing movies -->
                 <div class="col-sm">
                 
                     <h3>Now Playing:</h3>
+
+                    <!-- Bootstrap List Group component -->
                     <ul class="list-group">
+
                         <li class="list-group-item">
                             <a class="nav-link" href="#">Kong: Skull Island</a>
                         </li>
+
                         <li class="list-group-item">
                             <a class="nav-link" href="#">Ghost in the Shell</a>
                         </li>
+
                         <li class="list-group-item">
                             <a class="nav-link" href="#">Beauty and the Beast</a>
                         </li>
+
                     </ul>
                 </div>
             </div>
         </div>
 
         <!-- showtimes --> 
+        <!-- Movie showtime section using Bootstrap cards -->
         <!-- Refer to "head" for styling of cards as I had some alignment issues-->
         <section id="showtime">
+
+            <!-- Card deck keeps cards evenly spaced -->
             <div class="card-deck my-5">
+
+                <!-- Movie Card 1 -->
                 <div class="card">
+
+                    <!-- Movie poster image -->
                     <img src="./img/kongskullisland.jpg" class="card-img-top"  alt="Kong Skull Island">
+
                     <div class="card-body">
+
+                        <!-- Movie title -->
                         <h5 class="card-title">Kong Skull Island</h5>
+
+                        <!-- Movie description -->
                         <p class="card-text">Kong: Skull Island follows a group of explorers and soldiers who travel to a mysterious, 
                             uncharted island, only to discover it's ruled by the massive Kong and filled with deadly creatures.
                             As they fight to survive, they realize Kong is not just a monster, but the island's protector. 
                             The film delivers thrilling action, striking visuals, and a fresh take on the King Kong legend.</p>
+
+                        <!-- Movie showtimes displayed as Bootstrap badges -->
                         <h6>
                             <span class="badge badge-pill badge-info">12:00 p.m.</span>
                             <span class="badge badge-pill badge-info">1:30 p.m.</span>
@@ -122,17 +186,25 @@
                             <span class="badge badge-pill badge-info">7:00 p.m.</span>
                             <span class="badge badge-pill badge-info">9:30 p.m.</span>
                         </h6>
+
                     </div>
                 </div>
 
+                <!-- Movie Card 2 -->
                 <div class="card">
+
                     <img class="card-img-top" src="./img/ghostintheshell.jpg" alt="Ghost in the Shell">
+
                     <div class="card-body">
+
                         <h5 class="card-title">Ghost in the Shell</h5>
+
                         <p class="card-text">Ghost in the Shell follows Major Mira Killian, a cyborg with a human brain, 
                             who works as an elite operative fighting cybercrime in a futuristic world where technology and humanity are deeply intertwined. 
                             As she hunts a dangerous hacker, she begins uncovering hidden truths about her past and the organization that created her. 
                             The film blends sleek visuals, intense action, and thought-provoking themes about identity and what it means to be human.</p>
+
+                        <!-- Showtime badges -->
                         <h6>
                             <span class="badge badge-pill badge-info">12:00 p.m.</span>
                             <span class="badge badge-pill badge-info">1:30 p.m.</span>
@@ -141,16 +213,24 @@
                             <span class="badge badge-pill badge-info">7:00 p.m.</span>
                             <span class="badge badge-pill badge-info">9:30 p.m.</span>
                         </h6>
+
                     </div>
                 </div>
 
+                <!-- Movie Card 3 -->
                 <div class="card">
+
                     <img class="card-img-top" src="./img/beautyandthebeast.jpg" alt="Beauty and the Beast">
+
                     <div class="card-body">
+
                         <h5 class="card-title">Beauty and the Beast</h5>
+
                         <p class="card-text">Beauty and the Beast follows Belle, a bright and independent young woman who becomes the prisoner of a mysterious Beast in his enchanted castle.
                              As she gets to know him, she discovers that beneath his frightening exterior lies a kind and gentle soul, and their growing bond may be the key to breaking a powerful curse. 
                              The film blends romance, music, and fantasy in a timeless tale about love, courage, and seeing beyond appearances.</p>
+
+                        <!-- Showtime badges -->
                         <h6>
                             <span class="badge badge-pill badge-info">12:00 p.m.</span>
                             <span class="badge badge-pill badge-info">1:30 p.m.</span>
@@ -159,57 +239,167 @@
                             <span class="badge badge-pill badge-info">7:00 p.m.</span>
                             <span class="badge badge-pill badge-info">9:30 p.m.</span>
                         </h6>
+
                     </div>
                 </div>
             </div>
-
-
         </section>
-        <!-- /showtimes -->    
+        <!-- /showtimes --> 
 
+        <!-- jumbotron heading -->
+        <!-- Promotional banner for movie deals -->
+        <div class="jumbotron jumbotron-fluid bg-info mt-5 text-center">
+
+            <div class="container">
+
+                <!-- Deals section title -->
+                <h1 class="display-4 hidden-sm-down" style="color:#fff;font-family:roboto;font-weight:900;text-transform:uppercase;">
+                Movie Deals</h1>
+
+                <p class="lead">Check out our monthly deals...</p>
+
+                <!--movie deals-->
+                <!-- Button triggers the modal popup form -->
+                <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#register">See our monthly movie deals!</button>                <!-- /movie deals-->
+
+            </div>
+        </div>
+        <!-- /jumbotron heading -->
+
+        <!-- Sign up form -->
+        <!-- Email signup form for movie rewards -->
         <div class="text-center">
+
             <form>
+
                 <h1 id="deals" class="text-primary my-5">Sign up for Movie Club Rewards!</h1>
+
+                <!-- Email input field -->
                 <div class="form-group">
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+
+                <!-- Popover button -->
+                <!-- Shows additional info when clicked -->
+                <button type="button" class="btn btn-secondary btn-info popover-dismiss" data-container="body" data-toggle="popover" data-placement="top" data-content="Submit your email to receive great movie reward deals!">
+                     Sign up!
+                </button>
+
             </form>       
         </div>
+        <!-- /Sign up form-->
 
+        <!-- Form modal-->
+        <!-- Bootstrap modal popup containing a registration form -->
+        <div class="modal" id="register" tabindex="-1" role="dialog">
+
+            <div class="modal-dialog" role="document">
+
+                <div class="modal-content">
+
+                    <!-- Modal header -->
+                    <div class="modal-header">
+
+                        <h5 class="modal-title">Register to receive movie deals...</h5>
+
+                        <!-- Close button -->
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+
+                    </div>
+
+                    <!-- Modal body -->
+                    <!-- Contains the registration form -->
+                    <div class="modal-body">
+
+                        <form>
+
+                            <!-- First name input -->
+                            <fieldset class="form-group">
+                                <label for="firstname">First Name:</label>
+                                <input type="text" class="form-control" id="firstname" placeholder="First Name...">
+                            </fieldset>
+
+                            <!-- Last name input -->
+                            <fieldset class="form-group">
+                                <label for="lastname">Last Name:</label>
+                                <input type="text" class="form-control" id="lastname" placeholder="Last Name...">
+                            </fieldset>
+
+                            <!-- Email input -->
+                            <fieldset class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" class="form-control" id="email" placeholder="Email...">
+                            </fieldset>
+
+                            <!-- Password input -->
+                            <fieldset class="form-group">
+                                <label for="password">Password:</label>
+                                <input type="password" class="form-control" id="password" placeholder="Password...">
+                            </fieldset>
+
+                        </form>
+
+                    </div>
+
+                    <!-- Modal footer with action buttons -->
+                    <div class="modal-footer">
+
+                        <button type="button" class="btn btn-primary">Save changes</button>
+
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                    </div>
+
+                </div>
+            </div>
+        </div> 
+        <!-- /form modal-->
+
+        <!-- Footer navigation links -->
         <div class="container my-5">
+
             <ul class="nav nav-inline">
+
                 <li class="nav-item">
                     <small><a class="nav-link active" href="#">Movie Rewards</a></small>
                 </li>
+
                 <li class="nav-item">
                     <small><a class="nav-link" href="#">Movies@news.org</a></small>
                 </li>
+
                 <li class="nav-item">
                     <small><a class="nav-link" href="#">Info@academycinemas.com</a> </small>
                 </li>
+
                 <li class="nav-item">
                     <small><a class="nav-link">&copy;2019 Academy Cinemas&reg; </small>
                 </li>
+
             </ul>
         </div>
-
-
-
-
-
-
-
     </div>
-
-
-
-    
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <!-- jQuery library required by Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+    <!-- Popper.js used for tooltips, popovers, and dropdown positioning -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap JavaScript functionality -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- Activates the Bootstrap popover on the Sign up button -->
+    <script>
+            $('.popover-dismiss').popover({
+            trigger: 'focus'
+            })
+    </script>
+
   </body>
 </html>
